@@ -10,7 +10,7 @@ spec:
   project: stage-devseccops
   source:
     path: nginx
-    repoURL: https://github.com/nishantguptaxe/nginx-service-configs.git
+    repoURL: git@github.com:amitopenwriteup/nginx-argoproj.git
     targetRevision: main
   syncPolicy:
     automated: {}
