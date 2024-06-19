@@ -27,7 +27,10 @@ spec:
           imagePullPolicy: 'Always'
           env:
             - name: "ENVIRONMENT"
-              value: stage
+              valueFrom:
+                configMapKeyRef:
+                  name: nginx-config
+                  key: ENVIRONMENT
           resources:
             requests:
               memory: '256Mi'
@@ -51,3 +54,4 @@ spec:
               port: http
             initialDelaySeconds: 10
             periodSeconds: 10
+
